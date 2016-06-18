@@ -18,8 +18,8 @@ import java.awt.event.*;
 public class Breakout extends GraphicsProgram {
 
 /** Width and height of application window in pixels */
-	public static final int APPLICATION_WIDTH = 40000;
-	public static final int APPLICATION_HEIGHT = 40000;
+	public static final int APPLICATION_WIDTH = 400;
+	public static final int APPLICATION_HEIGHT = 600;
 
 /** Dimensions of game board (usually the same) */
 	private static final int WIDTH = APPLICATION_WIDTH;
@@ -66,7 +66,7 @@ public class Breakout extends GraphicsProgram {
 	
 	public void setup(){
 		double x = (WIDTH - (BRICK_WIDTH * NBRICKS_PER_ROW))/2;
-		GRect rect = new GRect(BRICK_WIDTH, BRICK_HEIGHT, x, BRICK_Y_OFFSET);
+		GRect rect = new GRect(x, BRICK_Y_OFFSET, BRICK_WIDTH, BRICK_HEIGHT);
 		add(rect);
 	}
 

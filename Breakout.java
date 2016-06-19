@@ -95,9 +95,12 @@ public class Breakout extends GraphicsProgram {
 		paddle.setFilled(true);
 		paddle.setFillColor(Color.BLACK);
 		add(paddle);
+		System.out.println(+(WIDTH - PADDLE_WIDTH)/2);
 	
 	}
-	
+	public void mousePressed(MouseEvent e){
+		double a = paddle.getX();
+	}
 	public void mouseMoved(MouseEvent e){
 		double x = e.getX();
 		if (x > WIDTH){ x = WIDTH;}

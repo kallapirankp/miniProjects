@@ -65,7 +65,7 @@ public class Breakout extends GraphicsProgram {
 		addMouseListeners();
 		paddle = new GRect((WIDTH - PADDLE_WIDTH)/2, HEIGHT - PADDLE_HEIGHT, PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setFilled(true);
-		paddle.setFillColor(Color.RED);
+		paddle.setFillColor(Color.BLACK);
 		add(paddle);
 		
 	}

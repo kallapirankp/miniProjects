@@ -67,6 +67,11 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	public void setup(){
+		createBricks();
+		createPaddle();
+	}
+	
+	public void createBricks(){
 		int bHeight = BRICK_Y_OFFSET;
 		for(int i =1; i<=NBRICK_ROWS; i++){
 			
@@ -83,12 +88,14 @@ public class Breakout extends GraphicsProgram {
 			}
 			bHeight += BRICK_HEIGHT;
 		}
+	}
+	
+	public void createPaddle(){
 		paddle = new GRect((WIDTH - PADDLE_WIDTH)/2, HEIGHT - PADDLE_HEIGHT, PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setFilled(true);
 		paddle.setFillColor(Color.BLACK);
 		add(paddle);
-		
-		
+	
 	}
 	
 	public void mouseMoved(MouseEvent e){

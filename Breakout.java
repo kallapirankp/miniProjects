@@ -62,6 +62,7 @@ public class Breakout extends GraphicsProgram {
 	public void run() {
 		/* You fill this in, along with any subsidiary methods */
 		setup();
+		addMouseListeners();
 	}
 	
 	public void setup(){
@@ -81,6 +82,19 @@ public class Breakout extends GraphicsProgram {
 			}
 			bHeight += BRICK_HEIGHT;
 		}
+		paddle = new GRect(WIDTH - PADDLE_WIDTH/2, HEIGHT - PADDLE_HEIGHT, PADDLE_WIDTH, PADDLE_HEIGHT);
+		paddle.setFilled(true);
+		paddle.setFillColor(Color.BLACK);
+		add(paddle);
+		
 	}
-
+	
+	public void mouseMoved(MouseEvent e){
+		double x = e.getX();
+		if (x > WIDTH){ x = WIDTH;}
+		paddle.move(x,0);
+		x = e.getX();
+	}
+    //Instance Variables
+	public GRect paddle;
 }

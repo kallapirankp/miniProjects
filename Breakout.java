@@ -8,6 +8,7 @@
  */
 
 import acm.graphics.*;
+
 import acm.program.*;
 import acm.util.*;
 
@@ -135,5 +136,5 @@ public class Breakout extends GraphicsProgram {
 	public GRect paddle;
 	private double vx, vy;
 	public GOval ball;
-	private RandomGenerator rgen = RandomGenerator.getInstance();
+	//private RandomGenerator rgen = RandomGenerator.getInstance();
 }

@@ -63,7 +63,7 @@ public class Breakout extends GraphicsProgram {
 		/* You fill this in, along with any subsidiary methods */
 		setup();
 		play();
-		addMouseListeners();
+		
 		
 	}
 	
@@ -114,7 +114,8 @@ public class Breakout extends GraphicsProgram {
 		while(true){
 		
 		moveBall();
-		pause(100);}
+		pause(100);
+		addMouseListeners();}
 	}
 	
 	private void createBall(){

@@ -112,6 +112,7 @@ public class Breakout extends GraphicsProgram {
 		createBall();
 		vx = rgen.nextDouble(1.0, 3.0);
 		if (rgen.nextBoolean(0.5)) {vx = -vx;}
+		vy = 3;
 		while(true){	
 		moveBall();
 		pause(100);
@@ -126,12 +127,12 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void moveBall(){
-		vx += 2 ; vy += 3;
-		System.out.println("vx" +vx + "vy" + vy);
 		
-		if(vy >getHeight() - BALL_RADIUS){ vy = -vy; System.out.println("vx if exceeds" + vy);}
-		if(vx >getWidth()- BALL_RADIUS){ vx = -vx; System.out.println("vx if exceeds" + vy);}
-		if(vx <= 0){ vx = 5;}
+		System.out.println("vx" +vx + "vy" + vy);
+		if(ball.getY() >getHeight() - BALL_RADIUS){ vy = -vy; System.out.println("vx if exceeds" + vy);}
+		if(ball.getX() >getWidth()- BALL_RADIUS){ vx = -vx; System.out.println("vx if exceeds" + vy);}
+		if(ball.getX() <= 0){ vx = -vx;}
+		if(ball.getY()<=0){ vy = -vy;}
 		ball.move(vx, vy);
 	}
 	

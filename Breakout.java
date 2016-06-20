@@ -144,7 +144,7 @@ public class Breakout extends GraphicsProgram {
 			vy = -vy;
 			add(rect);
 		}
-		if(collider == rect){
+		else if(collider == rect){
 			vy = -vy;
 			remove(rect);
 		}

@@ -111,8 +111,8 @@ public class Breakout extends GraphicsProgram {
 	
 	public void play(){
 		createBall();
-		vx = rgen.nextDouble(1.0, 3.0);
-		if (rgen.nextBoolean(0.5)) {vx = -vx;}
+		//vx = rgen.nextDouble(1.0, 3.0);
+		//if (rgen.nextBoolean(0.5)) {vx = -vx;}
 		while(true){
 		moveBall();
 		pause(100);

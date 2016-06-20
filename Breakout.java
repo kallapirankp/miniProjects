@@ -187,7 +187,7 @@ public class Breakout extends GraphicsProgram {
 				pause(800);
 				remove(label2);
 			}
-			pause(800);
+			pause(500);
 			remove(label);
 			
 			System.out.println("n" +n);
@@ -199,6 +199,7 @@ public class Breakout extends GraphicsProgram {
 		add(label3);
 		GLabel label4 = new GLabel(" ",getWidth()/4,getHeight()/4);
 		label4.setLabel(num);
+		add(label4);
 		
 	}
     //Instance Variables

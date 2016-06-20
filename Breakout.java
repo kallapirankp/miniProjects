@@ -97,8 +97,6 @@ public class Breakout extends GraphicsProgram {
 		paddle.setFilled(true);
 		paddle.setFillColor(Color.BLACK);
 		add(paddle);
-		
-	
 	}
 	
 	public void mouseMoved(MouseEvent e){
@@ -128,12 +126,13 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void moveBall(){
-		vx += 2 ; vy += 3;
+		vx += 2 ; vy = 3;
 		System.out.println("vx" +vx + "vy" + vy);
-		ball.move(vx, vy);
+		
 		if(vy >getHeight() - BALL_RADIUS){ vy = -vy; System.out.println("vx if exceeds" + vy);}
 		if(vx >getWidth()- BALL_RADIUS){ vx = -vx; System.out.println("vx if exceeds" + vy);}
 		if(vx <= 0){ vx = 5;}
+		ball.move(vx, vy);
 	}
 	
     //Instance Variables

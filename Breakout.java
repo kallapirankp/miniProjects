@@ -172,7 +172,7 @@ public class Breakout extends GraphicsProgram {
 		n += 1;
 		remove(ball);
 		while (n<4){
-			label = new GLabel("OOPS !! The ball is crashed   Play again",getWidth()/2,getHeight()/2);
+			label = new GLabel("OOPS !! The ball is crashed   Play again",getWidth()/4,getHeight()/2);
 			add(label);
 			pause(800);
 			remove(label);

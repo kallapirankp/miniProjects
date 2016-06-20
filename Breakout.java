@@ -90,7 +90,7 @@ public class Breakout extends GraphicsProgram {
 			}
 			bHeight += BRICK_HEIGHT;
 		}
-		add(rect);
+		
 	}
 	
 	public void createPaddle(){
@@ -146,6 +146,7 @@ public class Breakout extends GraphicsProgram {
 		}
 		if(collider == rect){
 			vy = -vy;
+			remove(rect);
 		}
 	}
 	

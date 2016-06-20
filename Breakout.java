@@ -111,5 +111,5 @@ public class Breakout extends GraphicsProgram {
 	}
     //Instance Variables
 	public GRect paddle;
-	public double a;
+	public double a = paddle.getX();
 }

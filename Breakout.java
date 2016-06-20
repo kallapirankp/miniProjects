@@ -132,7 +132,7 @@ public class Breakout extends GraphicsProgram {
 		ball.move(vx, vy);
 		if(vy >getHeight() - BALL_RADIUS){ vy = -vy;}
 		if(vx >getWidth()- BALL_RADIUS){ vx = -vx;}
-		
+		if(vx <= 0){ vx = 5;}
 	}
 	
     //Instance Variables

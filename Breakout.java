@@ -91,11 +91,11 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	public void createPaddle(){
-		paddle = new GRect(0, getHeight() - PADDLE_HEIGHT, PADDLE_WIDTH, PADDLE_HEIGHT);
+		paddle = new GRect((getWidth()- PADDLE_WIDTH)/2, getHeight()-PADDLE_HEIGHT, PADDLE_WIDTH, PADDLE_HEIGHT);
 		paddle.setFilled(true);
 		paddle.setFillColor(Color.BLACK);
 		add(paddle);
-		System.out.println("paddle"+(WIDTH - PADDLE_WIDTH)/2);
+		
 	
 	}
 	public void mousePressed(MouseEvent e){

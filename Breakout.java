@@ -149,6 +149,7 @@ public class Breakout extends GraphicsProgram {
 		if(collider != paddle && collider != null){
 			vy = -vy;
 			remove(collider);
+			m = m+1;
 		}
 	}
 	
@@ -177,13 +178,13 @@ public class Breakout extends GraphicsProgram {
 			if(n==2){
 				GLabel label1 = new GLabel("You have two more attempts",getWidth()/4,0.75*getHeight());
 				add(label1);
-				pause(500);
+				pause(800);
 				remove(label1);
 			}
 			if(n==3){
 				GLabel label2 = new GLabel("You have one more attempt",getWidth()/4,0.75*getHeight());
 				add(label2);
-				pause(500);
+				pause(800);
 				remove(label2);
 			}
 			pause(800);
@@ -193,9 +194,12 @@ public class Breakout extends GraphicsProgram {
 			play();
 			
 		}
-		
+		String num = Integer.toString(m);
 		GLabel label3 = new GLabel("GAME OVER",getWidth()/4,getHeight()/2);
 		add(label3);
+		GLabel label4 = new GLabel(" ",getWidth()/4,getHeight()/4);
+		label4.setLabel(num);
+		
 	}
     //Instance Variables
 	public GRect rect;
@@ -203,6 +207,7 @@ public class Breakout extends GraphicsProgram {
 	public double vx, vy;
 	public GOval ball;
 	public int n=1;
+	public int m;
 	public GLabel label;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 }

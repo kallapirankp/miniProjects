@@ -168,8 +168,9 @@ public class Breakout extends GraphicsProgram {
 	}
 	public void endgame(){
 		n=1;
+		remove(ball);
 		while (n<4){
-			run();
+			play();
 			n++;
 		}
 	}

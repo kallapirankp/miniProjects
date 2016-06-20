@@ -194,11 +194,11 @@ public class Breakout extends GraphicsProgram {
 			play();
 			
 		}
-		String num = Integer.toString(m);
+		
 		GLabel label3 = new GLabel("GAME OVER",getWidth()/4,getHeight()/2);
 		add(label3);
-		GLabel label4 = new GLabel(" ",getWidth()/4,getHeight()/4);
-		label4.setLabel(num);
+		GLabel label4 = new GLabel(" ",getWidth()/4,0.75*getHeight());
+		label4.setLabel("YOUR  SCORE IS " +m);
 		add(label4);
 		
 	}

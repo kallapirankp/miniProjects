@@ -112,8 +112,8 @@ public class Breakout extends GraphicsProgram {
 	
 	public void play(){
 		createBall();
-		//vx = rgen.nextDouble(1.0, 3.0);
-		//if (rgen.nextBoolean(0.5)) {vx = -vx;}
+		vx = rgen.nextDouble(1.0, 3.0);
+		if (rgen.nextBoolean(0.5)) {vx = -vx;}
 		while(true){
 		moveBall();
 		pause(100);
@@ -128,13 +128,13 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void moveBall(){
-		vx = 5 ;vy = 3;
+		//vx = 5 ;vy = 3;
 		ball.move(vx, vy);
 	}
 	
     //Instance Variables
 	public GRect paddle;
-	private double vx, vy;
+	public double vx, vy;
 	public GOval ball;
-	//private RandomGenerator rgen = RandomGenerator.getInstance();
+	private RandomGenerator rgen = RandomGenerator.getInstance();
 }

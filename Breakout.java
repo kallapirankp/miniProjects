@@ -172,6 +172,7 @@ public class Breakout extends GraphicsProgram {
 		while (n<4){
 			play();
 			n++;
+			System.out.println("n" +n);
 		}
 	}
     //Instance Variables

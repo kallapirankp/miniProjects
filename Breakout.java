@@ -169,17 +169,28 @@ public class Breakout extends GraphicsProgram {
 		return obj1;
 	}
 	public void endgame(){
-		n += 1;
+		
 		remove(ball);
 		while (n<4){
 			label = new GLabel("OOPS !! The ball is crashed   Play again",getWidth()/4,getHeight()/2);
 			add(label);
+			if(n==1){
+				GLabel label1 = new GLabel("You have two more attempts",getWidth()/4,0.75*getHeight());
+				add(label1);
+			}
+			if(n==2){
+				GLabel label2 = new GLabel("You have one more attempt",getWidth()/4,0.75*getHeight());
+				add(label2);
+			}
 			pause(800);
 			remove(label);
 			System.out.println("n" +n);
 			play();
 			
 		}
+		n += 1;
+		GLabel label3 = new GLabel("GAME OVER",getWidth()/4,getHeight()/2);
+		add(label3);
 	}
     //Instance Variables
 	public GRect rect;

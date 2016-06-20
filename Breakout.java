@@ -103,6 +103,7 @@ public class Breakout extends GraphicsProgram {
 	public void play(){
 		createBall();
 		moveBall();
+		pause(50);
 	}
 	
 	private void createBall(){
@@ -113,7 +114,7 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	private void moveBall(){
-		vx = 2; vy = 3;
+		vx += 2; vy += 3;
 		ball.move(vx, vy);
 	}
 	public void mouseMoved(MouseEvent e){

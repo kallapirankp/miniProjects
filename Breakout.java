@@ -101,9 +101,10 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	public void play(){
+		while(true){
 		createBall();
 		moveBall();
-		pause(50);
+		pause(50);}
 	}
 	
 	private void createBall(){

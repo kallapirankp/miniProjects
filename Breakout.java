@@ -115,7 +115,7 @@ public class Breakout extends GraphicsProgram {
 		vy = 3;
 		while(true){	
 		moveBall();
-		pause(100);
+		pause(50);
 		addMouseListeners();}
 	}
 	

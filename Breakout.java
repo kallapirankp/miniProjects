@@ -177,13 +177,18 @@ public class Breakout extends GraphicsProgram {
 			if(n==2){
 				GLabel label1 = new GLabel("You have two more attempts",getWidth()/4,0.75*getHeight());
 				add(label1);
+				pause(500);
+				remove(label1);
 			}
 			if(n==3){
 				GLabel label2 = new GLabel("You have one more attempt",getWidth()/4,0.75*getHeight());
 				add(label2);
+				pause(500);
+				remove(label2);
 			}
 			pause(800);
 			remove(label);
+			
 			System.out.println("n" +n);
 			play();
 			

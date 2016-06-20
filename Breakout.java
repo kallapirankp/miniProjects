@@ -107,6 +107,9 @@ public class Breakout extends GraphicsProgram {
 	
 	private void createBall(){
 		ball = new GOval ((getWidth()- BALL_RADIUS)/2, (getHeight()-BALL_RADIUS)/2, BALL_RADIUS, BALL_RADIUS);
+		ball.setFilled(true);
+		ball.setFillColor(Color.BLACK);
+		add(ball);
 	}
 	public void mouseMoved(MouseEvent e){
 		double x = e.getX();

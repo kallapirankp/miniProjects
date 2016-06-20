@@ -131,8 +131,8 @@ public class Breakout extends GraphicsProgram {
 	private void moveBall(){
 		
 		System.out.println("vx" +vx + "vy" + vy);
-		if(ball.getY() >getHeight() - BALL_RADIUS){ vy = -vy; System.out.println("vx if exceeds" + vy);}
-		if(ball.getX() >getWidth()- BALL_RADIUS){ endgame();}
+		if(ball.getY() >getHeight() - BALL_RADIUS){ endgame(); System.out.println("vx if exceeds" + vy);}
+		if(ball.getX() >getWidth()- BALL_RADIUS){ vx = -vx;}
 		if(ball.getX() <= 0){ vx = -vx;}
 		if(ball.getY()<=0){ vy = -vy;}
 		ball.move(vx, vy);

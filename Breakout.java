@@ -99,15 +99,17 @@ public class Breakout extends GraphicsProgram {
 	
 	}
 	public void mousePressed(MouseEvent e){
-		double a = paddle.getX();
+	    a = paddle.getX();
 	}
 	public void mouseMoved(MouseEvent e){
 		double x = e.getX();
-		if (x > WIDTH){ x = WIDTH;}
+		if (x > getWidth()- PADDLE_WIDTH){ x = getWidth()- PADDLE_WIDTH;}
+		if (x < PADDLE_WIDTH){ x = PADDLE_WIDTH; }
 		System.out.println(+x);
-		paddle.move(x,0);
+		paddle.move(x - a, 0);
 		x = e.getX();
 	}
     //Instance Variables
 	public GRect paddle;
+	public double a;
 }

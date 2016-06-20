@@ -132,7 +132,7 @@ public class Breakout extends GraphicsProgram {
 		
 		System.out.println("vx" +vx + "vy" + vy);
 		if(ball.getY() >getHeight() - BALL_RADIUS){ vy = -vy; System.out.println("vx if exceeds" + vy);}
-		if(ball.getX() >getWidth()- BALL_RADIUS){ vx = -vx; System.out.println("vx if exceeds" + vy);}
+		if(ball.getX() >getWidth()- BALL_RADIUS){ endgame();}
 		if(ball.getX() <= 0){ vx = -vx;}
 		if(ball.getY()<=0){ vy = -vy;}
 		ball.move(vx, vy);
@@ -166,10 +166,18 @@ public class Breakout extends GraphicsProgram {
 		}
 		return obj1;
 	}
+	public void endgame(){
+		n=1;
+		while (n<4){
+			run();
+			n++;
+		}
+	}
     //Instance Variables
 	public GRect rect;
 	public GRect paddle;
 	public double vx, vy;
 	public GOval ball;
+	public int n;
 	private RandomGenerator rgen = RandomGenerator.getInstance();
 }

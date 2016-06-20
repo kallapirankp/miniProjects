@@ -110,8 +110,8 @@ public class Breakout extends GraphicsProgram {
 	}
 	
 	public void play(){
-		GPoint q = new GPoint(getWidth()/2,getHeight()/2);
-		if(q == label){ remove(label);}
+		//GPoint q = new GPoint(getWidth()/2,getHeight()/2);
+		//if(q == label){ remove(label);}
 		createBall();
 		vx = rgen.nextDouble(1.0, 3.0);
 		if (rgen.nextBoolean(0.5)) {vx = -vx;}
@@ -174,6 +174,8 @@ public class Breakout extends GraphicsProgram {
 		while (n<4){
 			label = new GLabel("OOPS !! The ball is crashed",getWidth()/2,getHeight()/2);
 			add(label);
+			pause(400);
+			remove(label);
 			System.out.println("n" +n);
 			play();
 			

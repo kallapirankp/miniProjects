@@ -107,7 +107,7 @@ public class Breakout extends GraphicsProgram {
 		if (x < PADDLE_WIDTH){ x = PADDLE_WIDTH; }
 		System.out.println(+x);
 		paddle.move(x - a, 0);
-		x = e.getX();
+		a = e.getX();
 	}
     //Instance Variables
 	public GRect paddle;

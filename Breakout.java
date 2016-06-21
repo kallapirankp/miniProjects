@@ -118,9 +118,9 @@ public class Breakout extends GraphicsProgram {
 		vy = 3;
 		while(true){	
 		moveBall();
-		if(m<20)pause(40);
-		if(m>20 && m<40) pause(20);
-		if(m>40) pause(10);
+		if(m<20)pause(20);
+		if(m>20 && m<40) pause(10);
+		if(m>40) pause(5);
 		addMouseListeners();
 		checkForCollison();}
 	}

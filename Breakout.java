@@ -122,9 +122,11 @@ public class Breakout extends GraphicsProgram {
 		if(m >= 10 && m < 30) pause(15);
 		if(m >= 30 && m < 40) pause(10);
 		if(m >= 40) pause(5);
+		if(m == 100) break;
 		
 		addMouseListeners();
 		checkForCollison();}
+		winner();
 	}
 	
 	private void createBall(){
@@ -205,6 +207,13 @@ public class Breakout extends GraphicsProgram {
 		label4.setLabel("YOUR  SCORE IS " +m);
 		add(label4);
 		
+	}
+	
+	public void winner(){
+		remove(ball);
+		GLabel label5 = new GLabel("", getWidth()/2, getHeight()/2);
+		label5.setLabel("WELL DONE!!!! YOU WON THE GAME");
+		add(label5);
 	}
     //Instance Variables
 	public GRect rect;

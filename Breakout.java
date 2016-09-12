@@ -61,7 +61,7 @@ public class Breakout extends GraphicsProgram {
 /* Method: run() */
 /** Runs the Breakout program. */
 	public void run() {
-		/* You fill this in, along with any subsidiary methods */
+		
 		setup();
 		play();
 		
@@ -104,14 +104,12 @@ public class Breakout extends GraphicsProgram {
 		double x = e.getX();
 		double a = paddle.getX();
 		if (x > getWidth()- PADDLE_WIDTH){ x = getWidth()- PADDLE_WIDTH;}
-		//System.out.println(+x);
 		paddle.move(x - a, 0);
 		a = e.getX();
 	}
 	
 	public void play(){
-		//GPoint q = new GPoint(getWidth()/2,getHeight()/2);
-		//if(q == label){ remove(label);}
+		
 		createBall();
 		vx = rgen.nextDouble(1.0, 3.0);
 		if (rgen.nextBoolean(0.5)) {vx = -vx;}
